@@ -1,0 +1,74 @@
+<html>
+<meta charset="UTF-8">
+    <head>
+        <title>DB web-site</title>
+    <style>
+		body {
+		background: #d6eaf8;
+		}
+		
+		.gradient-button {
+		text-decoration: none;
+		display: inline-block;
+		color: white;
+		padding: 20px 30px;
+		margin: 10px 20px;
+		border-radius: 10px;
+		font-family: 'Montserrat', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		background-image: linear-gradient(to right, #9EEFE1 0%, #4830F0 51%, #9EEFE1 100%);
+		background-size: 200% auto;
+		box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+		transition: .5s;
+		}
+		
+		.gradient-button:hover {
+		background-position: right center;
+		}
+        *{
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            list-style-type: none;
+        }
+        h2 {
+			padding: 10px;
+            margin: 10px;
+			text-transform: uppercase;
+			color: 610B0B;
+		}
+        ul{
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid #ccc;
+			border-style: dashed;
+        }
+        
+        li{
+            margin-bottom: 20px;
+			text-transform: uppercase;
+		
+        }
+        
+        li:last-child{
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+		a { 
+			text-decoration: none; /* Отменяем подчеркивание у ссылки */
+		} 
+    </style>
+    </head>
+<body>
+    <b><h2>Домашня сторінка</h2></b>
+    <ul>
+        <li  style="border:4px #2E9AFE  double;"><a href="{{ url_for('browse') }}" class="gradient-button">Всі записи</a>
+        <li  style="border:4px #2E9AFE  double;"><a href="{{ url_for('write') }}" class="gradient-button">Зробити новий запис</a>
+        <li  style="border:4px #2E9AFE  double;"><a href="{{ url_for('edit') }}" class="gradient-button">Редагування записів</a>
+        <li  style="border:4px #2E9AFE  double;"><a href="{{ url_for('delete') }}" class="gradient-button">Видалити запис</a>
+    </ul>
+</body>
+</html>
